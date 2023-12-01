@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:sweety_app/core/constants/app_assets.dart';
 import 'package:sweety_app/core/constants/app_colors.dart';
+import 'package:sweety_app/core/constants/app_icons.dart';
 import 'package:sweety_app/views/navigator/navigator_screen.dart';
 
 class OnboardingView extends StatefulWidget {
@@ -33,11 +36,26 @@ class _OnboardingViewState extends State<OnboardingView> {
       body: SizedBox.expand(
         child: Stack(
           children: [
+            // Positioned(
+            //     // top: 40.h,
+            //     child: Container(
+            //   color: Colors.red,
+            //   height: 40.h,
+            //   child: PageView(
+            //     // physics: const NeverScrollableScrollPhysics(),
+            //     controller: _pageController2,
+            //     children: [
+            //       const SizedBox.shrink(),
+            //       const SizedBox.shrink(),
+            //     ],
+            //   ),
+            // )),
             Positioned.fill(
-              top: 40.h,
+              // top: 5.h,
               child: PageView(
                 controller: _pageController,
                 onPageChanged: (int index) {
+
                   setState(() {
                     print("index befire $_selectedIndex vs now is $index}");
                     _selectedIndex = index;
@@ -58,12 +76,13 @@ class _OnboardingViewState extends State<OnboardingView> {
                     body:
                         "Add your address and enjoy our fast, and free delivery, no matter if you pay online or cash.",
                     headline: "Fast & Free Delivery",
+                    show: true,
                   ),
                 ],
               ),
             ),
             Positioned.fill(
-              top: 30.h,
+              top: 50.h,
               left: 0,
               right: 0,
               child: Align(
@@ -89,16 +108,23 @@ class _OnboardingViewState extends State<OnboardingView> {
                   width: 40.w,
                   child: ElevatedButton(
                     onPressed: () {
-                      _selectedIndex < 2
-                          ? _pageController.animateToPage(2,
-                              duration: const Duration(microseconds: 500),
-                              curve: Curves.easeIn)
-                          : Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      const NavigatorScreen()),
-                            );
+                      print("object");
+                      if (_selectedIndex < 2) {
+                        setState(() {
+
+                        _pageController.animateToPage(2,
+                            duration: const Duration(microseconds: 500),
+                            curve: Curves.linear);
+
+                        });
+
+                      } else {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const NavigatorScreen()),
+                        );
+                      }
                     },
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 300),
@@ -135,14 +161,24 @@ class _OnboardingViewState extends State<OnboardingView> {
 class HeadlineAndBodyText extends StatelessWidget {
   final String headline;
   final String body;
+  final bool show;
 
   const HeadlineAndBodyText(
-      {super.key, required this.body, required this.headline});
+      {super.key,
+      required this.body,
+      required this.headline,
+      this.show = false});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Container(
+          height: 40.h,
+          margin: EdgeInsets.symmetric(horizontal: 10.h,
+          vertical: 5.h),
+          child: show ? Image.asset(AppAssets.scooter) : null,
+        ),
         Text(
           headline,
           textAlign: TextAlign.center,

@@ -25,16 +25,16 @@ TextButtonThemeData textButtonThemeData = TextButtonThemeData(
 );
 
 OutlinedButtonThemeData outlinedButtonTheme(
-    {Color borderColor = Colors.black12}) {
+    ) {
   return OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      backgroundColor: AppColors.primaryColor,
-      minimumSize: const Size(double.infinity, 32),
+      backgroundColor: AppColors.whiteColor,
+      minimumSize:  Size(double.infinity, 7.h),
       textStyle:
-          const TextStyle(color: AppColors.whiteColor, fontFamily: "Poppins-Medium"),
-      side: BorderSide(width: 1.5, color: borderColor),
+          const TextStyle(color: AppColors.orangeColor, fontFamily: "Poppins-Medium"),
+      side: const BorderSide(width: 1.5, color: AppColors.orangeColor),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(2.w)),
+        borderRadius: BorderRadius.all(Radius.circular(5.w)),
       ),
     ),
   );

@@ -15,3 +15,4 @@ const AppBarTheme appBarLightTheme = AppBarTheme(
     color: AppColors.blackColor,
   ),
 );
+

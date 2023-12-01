@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sweety_app/views/favourites_screen/favourites_screen.dart';
 import 'package:sweety_app/views/home_screen/home_screen.dart';
-import 'package:sweety_app/views/onboarding_screen/onboarding_view.dart';
 import 'package:sweety_app/views/settings_screen/settings_screen.dart';
 
 class NavigatorScreen extends StatefulWidget {
@@ -32,8 +31,7 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
     setState(() {
       _selectedIndex = index;
       //using this page controller you can make beautiful animation effects
-      _pageController.animateToPage(index,
-          duration: const Duration(milliseconds: 350), curve: Curves.easeOut);
+      _pageController.jumpToPage(index);
     });
   }
 
