@@ -5,11 +5,8 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:sweety_app/core/constants/app_colors.dart';
 import 'package:sweety_app/core/theme/light_theme.dart';
 import 'package:sweety_app/views/navigator/navigator_screen.dart';
-import 'package:sweety_app/views/onboarding_screen/onboarding_view.dart';
-import 'package:sweety_app/views/splash_screen/splash_screen.dart';
 
 import 'views/settings_screen/blocs/bloc/menu_list_bloc.dart';
-import 'views/settings_screen/blocs/cubit/cubit_list_cubit.dart';
 
 void main() {
   init();
