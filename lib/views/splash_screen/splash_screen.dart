@@ -11,12 +11,12 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocListener<SplashBloc, SplashState>(
       listener: (BuildContext context, state) {
-        print("splashe event alled");
-        if(state is SplashInitial){
-          context.read<SplashBloc>().add(SplashNavigateEvent(
-              context: context,
-          ));
-        }
+        // print("splashe event alled");
+        // if(state is SplashInitial){
+        //   context.read<SplashBloc>().add(SplashNavigateEvent(
+        //       context: context,
+        //   ));
+        // }
       },
       child: Scaffold(
         backgroundColor: AppColors.primaryColor,

@@ -12,6 +12,10 @@ class AppIcons {
   static const String language = "assets/Icons/Language.svg";
   static const String security = "assets/Icons/Security.svg";
   static const String cart = "assets/Icons/cart.svg";
+  static const String search = "assets/Icons/search.svg";
+  static const String filter = "assets/Icons/filter.svg";
+
+
 
 
 
