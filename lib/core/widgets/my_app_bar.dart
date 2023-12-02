@@ -10,10 +10,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      stretch: false,
       expandedHeight: 15.h,
-
+      collapsedHeight:15.h,
       flexibleSpace: Container(
-        margin: EdgeInsets.only(top: 4.h,left: 5.w),
+        margin: EdgeInsets.only(top: 2.h,left: 5.w),
         width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -20,23 +20,26 @@ class HomeScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           const MyAppBar(),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                Text(
-                  "Good morning, Razan! ",
-                  style: Theme.of(context).textTheme.headlineSmall,
-                ),
-                Text(
-                  "Let’s get your order",
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge
-                      ?.copyWith(color: AppColors.primaryColor),
-                ),
-                const CustomSearchBar(),
-                const CustomChip(),
-              ],
+          SliverPadding(
+            padding: EdgeInsets.symmetric(horizontal: 3.w),
+            sliver: SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  Text(
+                    "Good morning, Razan! ",
+                    style: Theme.of(context).textTheme.headlineSmall,
+                  ),
+                  Text(
+                    "Let’s get your order",
+                    style: Theme.of(context)
+                        .textTheme
+                        .titleLarge
+                        ?.copyWith(color: AppColors.primaryColor),
+                  ),
+                  const CustomSearchBar(),
+                  const CustomChip(),
+                ],
+              ),
             ),
           ),
           BlocBuilder<HomeBloc, HomeState>(builder: (context, state) {
@@ -75,7 +78,6 @@ class HomeScreen extends StatelessWidget {
           }),
         ],
       ),
-
     );
   }
 }
