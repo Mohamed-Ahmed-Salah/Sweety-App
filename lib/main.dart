@@ -4,9 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:sweety_app/core/constants/app_colors.dart';
-import 'package:sweety_app/core/routes/app_routes.dart';
 import 'package:sweety_app/core/routes/router.dart';
-
 import 'package:sweety_app/core/theme/light_theme.dart';
 import 'package:sweety_app/data/services/storage_service.dart';
 import 'views/settings_screen/blocs/bloc/menu_list_bloc.dart';

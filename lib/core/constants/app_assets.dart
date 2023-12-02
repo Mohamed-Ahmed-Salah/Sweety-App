@@ -11,6 +11,8 @@ class AppAssets {
   static const String snakeCake = "assets/food/snakecake.png";
 
   static const String emptyCart = "assets/svg_pics/empty-cart.png";
+  static const String profile = "assets/svg_pics/profile.png";
+
 
 
 

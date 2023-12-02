@@ -6,8 +6,6 @@ import 'package:sweety_app/data/models/side_menu.dart';
 import 'package:sweety_app/views/settings_screen/blocs/bloc/menu_list_bloc.dart';
 import 'package:sweety_app/views/settings_screen/widgets/SettingsItem.dart';
 
-import 'blocs/bloc/menu_list_bloc.dart';
-
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});

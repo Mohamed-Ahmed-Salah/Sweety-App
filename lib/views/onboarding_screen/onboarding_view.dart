@@ -36,22 +36,8 @@ class _OnboardingViewState extends State<OnboardingView> {
       body: SizedBox.expand(
         child: Stack(
           children: [
-            // Positioned(
-            //     // top: 40.h,
-            //     child: Container(
-            //   color: Colors.red,
-            //   height: 40.h,
-            //   child: PageView(
-            //     // physics: const NeverScrollableScrollPhysics(),
-            //     controller: _pageController2,
-            //     children: [
-            //       const SizedBox.shrink(),
-            //       const SizedBox.shrink(),
-            //     ],
-            //   ),
-            // )),
+
             Positioned.fill(
-              // top: 5.h,
               child: PageView(
                 controller: _pageController,
                 onPageChanged: (int index) {
